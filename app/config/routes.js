@@ -8,6 +8,7 @@ import {
 import Main from '../components/Main';
 import Home from '../components/Home';
 import PromptContainer from '../containers/PromptContainer';
+import ConfirmBattleContainer from '../containers/ConfirmBattleContainer';
 
 export default (
     <Router history={hashHistory}>
@@ -21,6 +22,9 @@ export default (
                 path='playerTwo/:playerOne'
                 header='Player Two'
                 component={PromptContainer} />
+            <Route
+                path='battle'
+                component={ConfirmBattleContainer} />
         </Route>
     </Router>
 )
