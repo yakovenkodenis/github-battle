@@ -23,7 +23,10 @@ module.exports = {
                 query: {
                     cacheDirectory: true,
                     presets: ["es2015", "stage-0", "react"],
-                    plugins: ["transform-decorators-legacy"]
+                    plugins: [
+                        "transform-decorators-legacy",
+                        "transform-class-properties"
+                    ]
                 }
             },
             { test: require.resolve('react'), loader: 'expose?React' },

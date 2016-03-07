@@ -12,6 +12,10 @@ export default class PromptContainer extends Component {
         router: PropTypes.object.isRequired
     }
 
+    static defaultProps = {
+        ...Component.defaultProps
+    }
+
     state = {
         username: ''
     }
