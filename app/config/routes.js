@@ -8,6 +8,7 @@ import {
 import Main from '../components/Main';
 import Home from '../components/Home';
 import PromptContainer from '../containers/PromptContainer';
+import ResultsContainer from '../containers/ResultsContainer';
 import ConfirmBattleContainer from '../containers/ConfirmBattleContainer';
 
 export default (
@@ -25,6 +26,9 @@ export default (
             <Route
                 path='battle'
                 component={ConfirmBattleContainer} />
+            <Route
+                path='results'
+                components={ResultsContainer} />
         </Route>
     </Router>
 )
