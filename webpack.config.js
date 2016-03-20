@@ -31,6 +31,7 @@ module.exports = {
             },
             { test: require.resolve('react'), loader: 'expose?React' },
             { test: require.resolve('react-dom'), loader: 'expose?ReactDOM' },
+            { test: /\.css$/, loader: 'style-loader!css-loader' }
         ]
     },
     plugins: [
