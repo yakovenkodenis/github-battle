@@ -1,1 +1,1 @@
-# github-battle
+# The Github Battle ReacJS app.
