@@ -2,6 +2,7 @@ import Radium from 'radium';
 import styles from '../styles';
 import { PropTypes } from 'react';
 import { Link } from 'react-router';
+import Loading from './Loading';
 import UserDetails from './UserDetails';
 import MainContainer from './MainContainer';
 import UserDetailsWrapper from './UserDetailsWrapper';
@@ -9,7 +10,7 @@ import UserDetailsWrapper from './UserDetailsWrapper';
 
 const ConfirmBattle = (props) => {
     return props.isLoading
-        ? <p> LOADING... </p>
+        ? <Loading speed={300} text='Just a moment' />
         :
         <MainContainer>
             <h1>Confirm Players</h1>

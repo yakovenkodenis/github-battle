@@ -1,5 +1,6 @@
 import { PropTypes } from 'react';
 import { Link } from 'react-router';
+import Loading from './Loading';
 import UserDetails from './UserDetails';
 import MainContainer from './MainContainer';
 import UserDetailsWrapper from './UserDetailsWrapper';
@@ -21,7 +22,7 @@ const Results = (props) => {
 
     if (props.isLoading) {
         return (
-            <p> LOADING </p>
+            <Loading speed={300} text='Just a moment' />
         );
     }
 
@@ -36,6 +37,8 @@ const Results = (props) => {
 
     const winningIndex = +!(props.scores[0] > props.scores[1]);
     const losingIndex = +!winningIndex;
+
+    console.log(props.scores[losingIndex]);
 
     return (
         <MainContainer>
