@@ -3,20 +3,15 @@ import styles from '../styles';
 import { PropTypes } from 'react';
 import { Link } from 'react-router';
 import UserDetails from './UserDetails';
+import MainContainer from './MainContainer';
 import UserDetailsWrapper from './UserDetailsWrapper';
 
-
-const puke = (object) => {
-    return <pre>{JSON.stringify(object, null, ' ')}</pre>
-}
 
 const ConfirmBattle = (props) => {
     return props.isLoading
         ? <p> LOADING... </p>
         :
-        <div
-            className='jumbotron col-sm-12 text-center'
-            style={[styles.transparentBg]}>
+        <MainContainer>
             <h1>Confirm Players</h1>
             <div className='col-sm-8 col-sm-offset-2'>
                 <UserDetailsWrapper header='Player One'>
@@ -43,7 +38,7 @@ const ConfirmBattle = (props) => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </MainContainer>
 }
 
 ConfirmBattle.propTypes = {
